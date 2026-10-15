@@ -12,7 +12,7 @@ public class StudiKasus1_04 {
         System.out.println("Masukkan Jumlah Cup Yang Ingin Di Beli :");
         JumlahCup= sc.nextInt();
 
-        System.out.println("MAsukkan Uang Pembayaran :");
+        System.out.println("Masukkan Uang Pembayaran :");
         UangBayar= sc.nextInt();
 
         TotalHarga= JumlahCup * HargaPerCup;
