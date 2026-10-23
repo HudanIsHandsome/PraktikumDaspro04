@@ -6,7 +6,7 @@ public class KafeDoWhile04 {
         Scanner sc = new Scanner(System.in);
 
         String namaPelanggan;
-        int hargaKopi = 12000, hargaTeh = 7000, hargaRoti = 20000, kopi, teh, roti;
+        int hargaKopi = 10000 + (4 % 5)* 1000, hargaTeh = 5000 + (4 % 4)* 1000, hargaRoti = 15000 + (4 % 6)* 1000, kopi, teh, roti;
         double totalHarga;
 
         do {
