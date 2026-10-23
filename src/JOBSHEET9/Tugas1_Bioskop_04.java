@@ -1,0 +1,50 @@
+package JOBSHEET9;
+import java.util.Scanner;
+
+public class Tugas1_Bioskop_04 {
+    public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
+
+        int hargaTiket = (40000 + (4%6)*2000), jumlahTiket = 0, totalHarga, totalTiket = 0, pembeli;
+        double diskon = 0, totalBayar;
+        
+        System.out.print("Masukkan jumlah pembeli : ");
+        pembeli = sc.nextInt();
+        for (int org = 0; org < pembeli ; org++) {
+            System.out.print("Masukkan jumlah tiket pembeli ke - " +(org + 1) + " : ");
+            jumlahTiket = sc.nextInt();
+            
+            if (jumlahTiket > (3+(4%3))) {
+                //8 +(4%5))/100
+                diskon = 0.12;
+                totalHarga = hargaTiket * jumlahTiket;
+                totalBayar = totalHarga - (totalHarga*diskon);
+                System.out.println("Harga yang dibayar : " + totalBayar);
+            } else if (jumlahTiket > (8+(4%4))){
+                //(15+(4%4))/100
+                diskon = 0.15;
+                totalHarga = hargaTiket * jumlahTiket;
+                totalBayar = totalHarga - (totalHarga*diskon);
+                System.out.println("Harga yang dibayar : " + totalBayar);
+            } else if (jumlahTiket <= 4 && jumlahTiket >= 0){
+                diskon = 0;
+                totalHarga = hargaTiket * jumlahTiket;
+                totalBayar = totalHarga - (totalHarga*diskon);
+                System.out.println("Harga yang dibayar : " + totalBayar);
+            } else {
+                System.out.println("Tidak valid, isi lagi");
+                org--;
+                continue;
+            }
+            totalTiket += jumlahTiket;
+        }
+       
+        totalHarga = hargaTiket * totalTiket;
+        totalBayar = totalHarga - (totalHarga*diskon);
+
+        System.out.println("Total tiket = " + totalTiket);
+        System.out.println("Total penjualan = Rp. " + totalBayar);
+
+    sc.close();
+    }
+}
