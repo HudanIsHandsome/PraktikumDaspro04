@@ -9,6 +9,7 @@ public class SiakadWhile04 {
 
         System.out.print("Masukkan jumlah mahasiswa : ");
         jml = sc.nextInt();
+        // 15 + (4 mod 10) = 19
 
         while (i < jml) {
             System.out.print("Masukkan nilai mahasiswa ke - " + (i+1) + " : ");
@@ -21,6 +22,7 @@ public class SiakadWhile04 {
             
             if (nilai > 85 && nilai <= 100) {
                 System.out.println("Nilai mahasiswa ke - " + (i+1) + " adalah A");
+                System.out.println("Bagus, pertahankan nilainya!");
             } else if (nilai > 73 && nilai <= 85) {
                 System.out.println("Nilai mahasiswa ke - " + (i+1) + " adalah B+");
             } else if (nilai > 65 && nilai <= 73) {
